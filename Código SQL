@@ -1,0 +1,17 @@
+CREATE PROCEDURE TotalCuentas(IN Cedu INT)
+BEGIN
+Declare NumCe, NumId INT;
+SET NumCe = Cedu;
+SET NumId = (select (presupuesto.idPresupuesto) 
+	from presupuesto
+	JOIN usuario
+	ON presupuesto.cedula = usuario.cedula
+	where presupuesto.cedula = Numce);
+select sum(cuentas.monto) As TotalCuentas
+from cuentas
+JOIN presupuesto
+ON cuentas.idPresupuesto = presupuesto.idPresupuesto
+where cuentas.idpresupuesto = NumId
+GROUP BY cuentas.idPresupuesto;
+
+END
