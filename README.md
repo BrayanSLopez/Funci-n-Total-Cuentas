@@ -5,11 +5,13 @@ Se crea una función llamada "TotalCuentas", el cual contara como parametro de e
 ![image](https://github.com/user-attachments/assets/e1803542-76ab-4bd5-a017-81300da2e55a)
 
 Se declararan dos variables las cuales seran "NumCe" donde guardaremos el numero de cedula ingresado como parametro y la segunda variable sera "NumId" en la cual guardaremos el numero IdPresupuesto correspondiente a esa cedula.
+
 Este IdPresupuesto lo traeremos de la tabla presupuesto usando un Select JOIN donde usaremos como llave foranea presupuesto.cedula con Numce.
 
 ![image](https://github.com/user-attachments/assets/e6360813-c4be-4ab4-a1f0-bb52cbf1e40f)
 
-Seguidamente comop desarrollo de la funcion usaremos la sentencia "sum" para para sumar el total del contendio de las cuentas correspondiente a un IdPresupuesto el cual anteriormente le asignamos a la valiable NumId con el numero de cedula, la llave foranea que se utilizara sera cuentas.IdPresupuesto con NumId.
+Seguidamente como desarrollo de la funcion usaremos la sentencia "sum" para para sumar el total del contendio de las cuentas correspondiente a un IdPresupuesto el cual anteriormente le asignamos a la valiable NumId con el numero de cedula, la llave foranea que se utilizara sera cuentas.IdPresupuesto con NumId.
+
 Las tablas utilizadas fueron: 
 - Cuentas
 
@@ -19,7 +21,7 @@ Las tablas utilizadas fueron:
 
 ![image](https://github.com/user-attachments/assets/5598f876-b9e1-4f14-af66-f5ff08c0af12)
 
-Como apreciamos el resultado corresponde a la suma del contenido de las cuentas del idPresupuesto que corresponde al numero de cedula asociado.
+Como apreciamos el resultado es la suma del contenido de las cuentas del idPresupuesto que corresponde al numero de cedula asociado.
 
 ![image](https://github.com/user-attachments/assets/02240425-b167-4e06-91da-1c315d0a44ca)
 
