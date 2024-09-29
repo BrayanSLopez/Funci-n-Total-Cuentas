@@ -1,30 +1,23 @@
-# Funcion-Total-Cuentas
+# Procedimiento-Total-Cuentas
 
-Se crea una función llamada "TotalCuentas", el cual contara como parametro de entrada el numero de cedula de un usuario ya registrado
+Dando respuesta al punto "Escribe un procedimiento almacenado para su proyecto integrador que sea útil."
 
-![image](https://github.com/user-attachments/assets/e1803542-76ab-4bd5-a017-81300da2e55a)
+Crearemos un procedimiento llamado TotalCuentas para el cual usaremos la información de las tablas cuentas y presupuesto.
 
-Se declararan dos variables las cuales seran "NumCe" donde guardaremos el numero de cedula ingresado como parametro y la segunda variable sera "NumId" en la cual guardaremos el numero IdPresupuesto correspondiente a esa cedula.
+![image](https://github.com/user-attachments/assets/f1e5f120-c8b1-4ee4-81ec-dac354407865)
 
-Este IdPresupuesto lo traeremos de la tabla presupuesto usando un Select JOIN donde usaremos como llave foranea presupuesto.cedula con Numce.
+![image](https://github.com/user-attachments/assets/664b3603-4c3d-468c-8215-e48d13fb76c1)
 
-![image](https://github.com/user-attachments/assets/e6360813-c4be-4ab4-a1f0-bb52cbf1e40f)
+Para el procedimiento tendremos como parámetro de entrada la cedula de un usuario y con ella y ayuda de un JOIN conseguiremos datos como: idPresupuesto, y con estos ya podemos saber cuanto dinero tiene el usuario en cada cuenta y con la función “sum” sabremos el total del usuario.
 
-Seguidamente como desarrollo de la funcion usaremos la sentencia "sum" para para sumar el total del contendio de las cuentas correspondiente a un IdPresupuesto el cual anteriormente le asignamos a la valiable NumId con el numero de cedula, la llave foranea que se utilizara sera cuentas.IdPresupuesto con NumId.
+![image](https://github.com/user-attachments/assets/24d1acbf-6b04-40eb-8bab-9d00a67eb853)
 
-Las tablas utilizadas fueron: 
-- Cuentas
+Como podemos ver en el ejemplo el usuario con cedula “1010101” tiene en total en todas sus cuentas $1.055.000 pesos.
 
-![image](https://github.com/user-attachments/assets/60b264d3-cc61-4dfa-8940-41a8bc64c5ea)
+![image](https://github.com/user-attachments/assets/defd0a34-74f9-4193-974f-5f3b887032c7)
 
-- Presupuesto
+Este es un procedimiento muy útil y utilizado en la vida real para poder unificar todo el dinero que un usuario pueda tener en diferentes cuentas, bancos y demás.
 
-![image](https://github.com/user-attachments/assets/5598f876-b9e1-4f14-af66-f5ff08c0af12)
 
-Como apreciamos el resultado es la suma del contenido de las cuentas del idPresupuesto que corresponde al numero de cedula asociado.
 
-![image](https://github.com/user-attachments/assets/02240425-b167-4e06-91da-1c315d0a44ca)
 
-La operatividad de esta función es que el usuario podra vizualizar el total de dinero que tiene en las diferentes cuentas unicamente con su numero de cedula, algo muy utilizado en la vida real.
-
-![image](https://github.com/user-attachments/assets/07d26457-c3f7-40d3-9bd8-3f699943def6)
